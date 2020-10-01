@@ -1,7 +1,5 @@
 package com.myclass.admin.controller;
 
-
-import java.text.DecimalFormat;
 import java.util.List;
 
 
@@ -25,7 +23,7 @@ import com.myclass.util.UrlConstants;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping(value = "")
+@RequestMapping(value = "") // ko hay
 public class CourseAdminController {
 	@Autowired
 	private CourseService courseService;

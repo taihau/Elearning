@@ -19,7 +19,7 @@ import com.myclass.service.UserService;
 import com.myclass.util.UrlConstants;
 
 @RestController
-@RequestMapping(value = UrlConstants.Admin.USER_API)
+@RequestMapping(value = UrlConstants.Admin.API_USER)
 public class ApiUserConstroller {
 	@Autowired
 	private UserService userService;

@@ -3,18 +3,14 @@ package com.myclass.service.impl;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.InputStream;
 
 import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
 
-import groovyjarjarasm.asm.TypeReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.myclass.service.UploadPathService;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
 @Service
 public class UploadPathServiceImpl implements UploadPathService {
@@ -23,13 +19,10 @@ public class UploadPathServiceImpl implements UploadPathService {
 	private ServletContext servletContext;
 	@Override
 	public String doUpload(MultipartFile file,String urlFile) {
-		HttpServletRequest request = null;
 		if (file.getSize() > 0) {
-		    // Thư mục gốc upload file.
 	        String uploadRootPath = System.getProperty("user.dir");
 			uploadRootPath += "\\src\\main\\resources" + urlFile;
 	        File uploadRootDir = new File(uploadRootPath);
-	        // Tạo thư mục gốc upload nếu nó không tồn tại.
 	        if (!uploadRootDir.exists()) {
 	            uploadRootDir.mkdirs();
 	        }
@@ -40,7 +33,6 @@ public class UploadPathServiceImpl implements UploadPathService {
     		    int index = originalFileName.lastIndexOf(".");
     			String ext = originalFileName.substring(index + 1);
     			originalFileName = System.currentTimeMillis() + "." + ext;
-                // Tạo file tại Server.
                 File serverFile = new File(uploadRootDir.getAbsolutePath() + File.separator + originalFileName);
 
                 BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(serverFile));

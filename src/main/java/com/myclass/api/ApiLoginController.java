@@ -15,17 +15,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.myclass.dto.LoginDto;
+import com.myclass.util.UrlConstants;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 @RestController
-@RequestMapping("api/auth")
+@RequestMapping(value = UrlConstants.Admin.API_AUTH)
 public class ApiLoginController {
 	@Autowired
 	private AuthenticationManager authenticationManager;
 	
-	@PostMapping("login")
+	@PostMapping(value = UrlConstants.Admin.LOGIN)
 	public Object login(@RequestBody LoginDto dto) {
 		
 		try {

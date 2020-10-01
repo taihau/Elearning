@@ -13,7 +13,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.sun.istack.NotNull;
 
 @Entity
 @Table(name = "users")

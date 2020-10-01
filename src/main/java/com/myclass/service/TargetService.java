@@ -1,7 +1,6 @@
 package com.myclass.service;
 
 import com.myclass.dto.TargetDto;
-import com.myclass.dto.UserDto;
 
 import java.util.List;
 

@@ -1,7 +1,5 @@
 package com.myclass.util;
 
-import java.util.HashMap;
-
 public class UrlConstants {
 	
 	private final static String ADMIN = "/admin/";
@@ -54,29 +52,41 @@ public class UrlConstants {
 		public static final String CATEGORY_EDIT = ADMIN + "category/edit";
 		public static final String CATEGORY_DELETE = ADMIN + "category/delete";
 		
-		//APi
-		public static final String USER_API = "/api/user";
-		public static final String ROLE_API = "/api/role";
+		public static final String ERROR_403 = ADMIN + "403";
+		public static final String ERROR_VIEW_403 = ADMIN + "/error/403";
 		
 		// Link thymeleaf in Views
 		public static final String FRAGMENTS_HEADER = "fragments/header";
 		
-		public static final String FILE_USER = "\\static\\admin\\images\\users\\";
-		public static final String FILE_COURSE = "\\static\\admin\\images\\course\\";
+		public static final String FILE_USER = "\\static\\adminStyle\\images\\users\\";
+		public static final String FILE_COURSE = "\\static\\adminStyle\\images\\course\\";
+		
+		//APi
+		public static final String LOGIN = "/login";
+		public static final String API_AUTH = "/api/auth";
+		public static final String API_USER = "/api/user";
+		public static final String API_ROLE = "/api/role";
+		public static final String API_CATEGORY = "/api/category";
 	}
 	
 	public static class Client{
-		public static final String HOME_URL = "home";
+		public static final String HOME_URL = "/home";
 		public static final String HOME = CLIENT + "home/index";
-		
-		
 		
 		public static final String COURSE_LIST = "/course/list";
 		public static final String COURSE_DETAIL = "/course/detail";
-		public static final String COURSE_DETAIL_VIEW = CLIENT+ "/course/detail";
-		public static final String COURSE_LIST_VIEW = CLIENT+ "course/index";
+		public static final String COURSE_SEARCH = "/course/search";
+		public static final String COURSE_DETAIL_VIEW = CLIENT + "course/detail";
+		public static final String COURSE_LIST_VIEW = CLIENT + "course/index";
+		public static final String COURSE_SEARCH_VIEW = CLIENT + "course/search";
 		
-		
+		public static final String ACCOUNT_LOGIN = "/account/login";
 		public static final String ACCOUNT_REGISTER = "/account/register";
+		public static final String ACCOUNT_SUCCESS = "/account/success";
+		public static final String ACCOUNT_VIEW_LOGIN = CLIENT + "account/login";
+		public static final String ACCOUNT_VIEW_SUCCESS = CLIENT + "account/success";
+		public static final String ACCOUNT_VIEW_REGISTER = CLIENT + "account/register";
+		
+		public static final String API_CLIENT_COURSE = "/apiClient/course";
 	}
 }

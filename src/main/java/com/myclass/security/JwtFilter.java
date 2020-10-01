@@ -7,7 +7,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -36,11 +35,6 @@ public class JwtFilter extends BasicAuthenticationFilter {
 		
 		if (tokenHeader != null && tokenHeader.startsWith("Bearer ")) {
 			String token = tokenHeader.replace("Bearer ", "");
-			// Giải mã token => lấy email
-			
-			// Sử dụng email truy vấn db  lấy thông tin user
-			
-			// set thông tin
 			String email = Jwts.parser()
 					.setSigningKey("KeyPass")
 					.parseClaimsJws(token)

@@ -2,7 +2,6 @@ package com.myclass.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -54,7 +53,6 @@ public class RoleServiceImpl implements RoleService {
 
 	@Override
 	public void delete(int id) {
-		Role role = roleRepository.findById(id).get();
 		roleRepository.deleteById(id);
 	}
 	

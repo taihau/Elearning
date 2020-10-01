@@ -1,15 +1,11 @@
 package com.myclass.dto;
 
 import java.sql.Timestamp;
-import java.text.DecimalFormat;
 
 import org.hibernate.validator.constraints.Length;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.persistence.Transient;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 
 public class CourseDto {
@@ -22,7 +18,6 @@ public class CourseDto {
 	private int hourCount;
 	private int viewCount = 0;
 	private double price = 0.000f;
-	private String showPrice;
 	private int discount = 0;
 	private double promotionPrice = 0.000f;
 	@NotBlank(message = "Vui lòng nhập mô tả")

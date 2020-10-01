@@ -1,5 +1,7 @@
+
 <nav class="pcoded-navbar" 
-xmlns:th="http://www.thymeleaf.org">
+xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
     <div class="pcoded-inner-navbar main-menu">
         <ul class="pcoded-item pcoded-left-item">
             <li class="">
@@ -8,13 +10,13 @@ xmlns:th="http://www.thymeleaf.org">
                     <span class="pcoded-mtext">Dashboard</span>
                 </a>
             </li>
-            <li class="">
+            <li class="" sec:authorize="hasRole('ROLE_ADMIN')">
                 <a th:href="@{${T(com.myclass.util.UrlConstants.Admin).CATEGORY}}">
                     <span class="pcoded-micon"><i class="feather icon-layers"></i></span>
                     <span class="pcoded-mtext">Danh mục</span>
                 </a>
             </li>
-            <li class="">
+            <li class="" >
                 <a th:href="@{${T(com.myclass.util.UrlConstants.Admin).COURSE}}">
                     <span class="pcoded-micon"><i class="feather icon-shopping-cart"></i></span>
                     <span class="pcoded-mtext">Khóa học</span>
@@ -38,7 +40,7 @@ xmlns:th="http://www.thymeleaf.org">
                     <span class="pcoded-mtext">Tài khoản</span>
                 </a>
             </li>
-            <li class="">
+            <li class="" sec:authorize="hasRole('ROLE_ADMIN')">
                 <a th:href="@{${T(com.myclass.util.UrlConstants.Admin).ROLE}}">
                     <span class="pcoded-micon"><i class="feather icon-user-check"></i></span>
                     <span class="pcoded-mtext">Quyền</span>

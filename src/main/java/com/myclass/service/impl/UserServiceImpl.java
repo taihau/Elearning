@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 
 import com.myclass.dto.UserDto;
 import com.myclass.entity.User;
-import com.myclass.repository.RoleRepository;
 import com.myclass.repository.UserRepository;
 import com.myclass.service.UserService;
 
@@ -24,8 +23,6 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
-	@Autowired
-	private RoleRepository roleRepository;
 
 	@Override
 	public List<UserDto> findAll() {
@@ -44,6 +41,15 @@ public class UserServiceImpl implements UserService {
 		UserDto userDto = new UserDto(user.getId(), user.getEmail(), user.getFullname(), user.getAvatar(), 
 				user.getPhone(), user.getAddress(), user.getRole_id());
 		return userDto;
+	}
+	
+	@Override
+	public boolean findByEmail(UserDto userDto) {
+		User user = userRepository.findByEmail(userDto.getEmail());
+		if (user != null) {
+			return true;
+		}
+		return false;
 	}
 
 	@Override
@@ -90,5 +96,7 @@ public class UserServiceImpl implements UserService {
 			userRepository.save(user);
 			return true;
 	}
+
+	
 
 }

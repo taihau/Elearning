@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping(value = "")
+@RequestMapping(value = "/admin/login")
 public class AccountAdminController {
 	
 	
 	
-	@RequestMapping(value = "/admin/login", method = RequestMethod.GET)
+	@RequestMapping(value = "", method = RequestMethod.GET)
 	public String login() {
 		return "/admin/account/index";
 	}
-	@RequestMapping(value = "/admin/login", method = RequestMethod.POST)
+	@RequestMapping(value = "", method = RequestMethod.POST)
 	public String alogin() {
 		return "/admin/account/index";
 	}

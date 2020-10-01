@@ -21,9 +21,9 @@
     <link rel="icon" th:href="@{/admin/images/favicon.ico}" type="image/x-icon">
     <link  xmlns:th="http://www.thymeleaf.org" th:href="@{https://fonts.googleapis.com/css?family=Open+Sans:400,600,800}" rel="stylesheet">
     <!-- Required Fremwork -->
-    <link rel="stylesheet"  xmlns:th="http://www.thymeleaf.org" type="text/css" th:href="@{/admin/plugins/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet"  xmlns:th="http://www.thymeleaf.org" type="text/css" th:href="@{/adminStyle/plugins/bootstrap/css/bootstrap.min.css}">
     <!-- Style.css -->
-    <link rel="stylesheet"  xmlns:th="http://www.thymeleaf.org" type="text/css" th:href="@{/admin/css/style.css}">
+    <link rel="stylesheet"  xmlns:th="http://www.thymeleaf.org" type="text/css" th:href="@{/adminStyle/css/style.css}">
 </head>
 
 <body class="fix-menu">
@@ -36,7 +36,7 @@
                 <!-- Authentication card start -->
                 <form class="md-float-material form-material" th:action="@{/admin/login}" method="post">
                     <div class="text-center">
-                        <img th:src="@{/admin/images/logo.png}" alt="logo.png">
+                        <img th:src="@{/adminStyle/images/logo.png}" alt="logo.png">
                     </div>
                     <div class="auth-box card">
                         <div class="card-block">
@@ -72,12 +72,12 @@
     <!-- end of container-fluid -->
 </section>
 <!-- Required Jquery -->
-<script  xmlns:th="http://www.thymeleaf.org" th:src="@{/admin/jquery/dist/jquery.min.js}"></script>
-<script  xmlns:th="http://www.thymeleaf.org" th:src="@{/admin/jquery-validation/dist/jquery.validate.min.js}"></script>
-<script  xmlns:th="http://www.thymeleaf.org" type="text/javascript" th:src="@{/admin/plugins/jquery/js/jquery.min.js}"></script>
-<script  xmlns:th="http://www.thymeleaf.org" type="text/javascript" th:src="@{/admin/plugins/jquery-ui/js/jquery-ui.min.js}"></script>
-<script  xmlns:th="http://www.thymeleaf.org" type="text/javascript" th:src="@{/admin/plugins/popper.js/js/popper.min.js}"></script>
-<script  xmlns:th="http://www.thymeleaf.org" type="text/javascript" th:src="@{/admin/plugins/bootstrap/js/bootstrap.min.js}"></script>
+<script  xmlns:th="http://www.thymeleaf.org" th:src="@{/adminStyle/jquery/dist/jquery.min.js}"></script>
+<script  xmlns:th="http://www.thymeleaf.org" th:src="@{/adminStyle/jquery-validation/dist/jquery.validate.min.js}"></script>
+<script  xmlns:th="http://www.thymeleaf.org" type="text/javascript" th:src="@{/adminStyle/plugins/jquery/js/jquery.min.js}"></script>
+<script  xmlns:th="http://www.thymeleaf.org" type="text/javascript" th:src="@{/adminStyle/plugins/jquery-ui/js/jquery-ui.min.js}"></script>
+<script  xmlns:th="http://www.thymeleaf.org" type="text/javascript" th:src="@{/adminStyle/plugins/popper.js/js/popper.min.js}"></script>
+<script  xmlns:th="http://www.thymeleaf.org" type="text/javascript" th:src="@{/adminStyle/plugins/bootstrap/js/bootstrap.min.js}"></script>
 </body>
 
 </html>

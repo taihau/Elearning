@@ -22,4 +22,7 @@ public interface CourseRepository extends JpaRepository<Course, Integer> {
     
     @Query(value = "SELECT * FROM courses ORDER BY id DESC LIMIT 6",nativeQuery = true)
     public List<Course> findAllNewCourse();
+    
+    @Query(value = "SELECT * FROM courses WHERE title LIKE %?1%", nativeQuery = true)
+    public List<Course> findByName(String courseTitle);
 }

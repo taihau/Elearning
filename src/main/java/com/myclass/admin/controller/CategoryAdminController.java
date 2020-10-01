@@ -2,26 +2,20 @@ package com.myclass.admin.controller;
 
 import java.util.List;
 
-import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.myclass.dto.CategoryDto;
 import com.myclass.dto.UserDetailDto;
-import com.myclass.entity.Category;
 import com.myclass.service.CategoryService;
-import com.myclass.service.impl.CategoryServiceImpl;
 import com.myclass.util.UrlConstants;
 
 @Controller

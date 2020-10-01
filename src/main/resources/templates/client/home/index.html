@@ -83,7 +83,7 @@
                     <div class="row">
                         <div class="col-md-3" th:each="courseDto : ${courseDtoSale}">
                             <div class="course" >
-                                <img th:src="'/admin/images/course/' + ${courseDto.getImage()}" />
+                                <img th:src="'/adminStyle/images/course/' + ${courseDto.getImage()}" />
                                 <h6 class="course-title" th:text="${courseDto.getTitle()}"></h6>
                                 <small class="course-content" th:text="${courseDto.getDescription()}">
                                 </small>
@@ -127,7 +127,7 @@
             <div class="row">
                 <div class="col-md-2" th:each="courseDto : ${courseDtoPopular}">
                     <div class="course">
-                        <img th:src="'/admin/images/course/' + ${courseDto.getImage()}" />
+                        <img th:src="'/adminStyle/images/course/' + ${courseDto.getImage()}" />
                         <h6 class="course-title" th:text="${courseDto.getTitle()}"></h6>
                         <small class="course-content" th:text="${courseDto.getDescription()}">
                         </small>
@@ -180,7 +180,7 @@
             <div class="row">
                 <div class="col-md-2" th:each="courseDto : ${courseDtoNew}">
                     <div class="course">
-                        <img th:src="'/admin/images/course/' + ${courseDto.getImage()}" />
+                        <img th:src="'/adminStyle/images/course/' + ${courseDto.getImage()}" />
                         <h6 class="course-title" th:text="${courseDto.getTitle()}"></h6>
                         <small class="course-content" th:text="${courseDto.getDescription()}">
                         </small>
@@ -212,6 +212,13 @@
             </div>
         </div>
     </section>
+    <div class="container-fluid">
+    	<div class="row"  >
+	    	
+             
+    	</div>
+    </div>
+    
 </div>
 
 

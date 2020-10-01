@@ -1,8 +1,9 @@
 package com.myclass.api;
 
 import com.myclass.dto.CategoryDto;
-import com.myclass.entity.Category;
 import com.myclass.service.CategoryService;
+import com.myclass.util.UrlConstants;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/category")
+@RequestMapping(value = UrlConstants.Admin.API_CATEGORY)
 public class ApiCategoryController {
     @Autowired
     private CategoryService categoryService;

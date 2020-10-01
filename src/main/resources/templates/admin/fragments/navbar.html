@@ -7,7 +7,7 @@ xmlns:th="http://www.thymeleaf.org">
                 <i class="feather icon-menu"></i>
             </a>
             <a th:href="@{ #{UrlConstants.Admin.HOME_PATTERNS}}">
-                <img class="img-fluid" th:src='@{/admin/images/logo.png}' alt="Theme-Logo">
+                <img class="img-fluid" th:src='@{/adminStyle/images/logo.png}' alt="Theme-Logo">
             </a>
             <a class="mobile-options">
                 <i class="feather icon-more-horizontal"></i>
@@ -49,18 +49,13 @@ xmlns:th="http://www.thymeleaf.org">
                 <li class="user-profile header-notification">
                     <div class="dropdown-primary dropdown">
                         <div class="dropdown-toggle" data-toggle="dropdown">
-                            <img  class="img-radius"
+                            <img  class="img-radius" th:src="'/adminStyle/images/users/'+ ${#authentication.getPrincipal().getAvatar()}"
                                 alt="User-Profile-Image">
-                            <!-- <span th:text="${userDetailDto.getFullname()}"></span> -->
+                            <span th:text="${#authentication.getPrincipal().getFullname()}"></span>
                             <i class="feather icon-chevron-down"></i>
                         </div>
                         <ul class="show-notification profile-notification dropdown-menu"
                             data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
-                            <li>
-                                <a href="#!">
-                                    <i class="feather icon-settings"></i> Settings
-                                </a>
-                            </li>
                             <li>
                                 <a href="user-profile.htm">
                                     <i class="feather icon-user"></i> Profile

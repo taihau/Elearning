@@ -1,9 +1,6 @@
 package com.myclass.service.impl;
 
-import java.math.BigDecimal;
-import java.sql.Timestamp;
 import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,11 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.myclass.dto.CourseDto;
-import com.myclass.entity.Category;
 import com.myclass.entity.Course;
-import com.myclass.entity.Target;
-import com.myclass.entity.UserCourse;
-import com.myclass.entity.Video;
 import com.myclass.repository.CourseRepository;
 import com.myclass.service.CourseService;
 
@@ -150,6 +143,19 @@ public class CourseServiceImpl implements CourseService {
 		List<Course> courseList = courseRepository.findAllNewCourse();
 		List<CourseDto> courseDtoList = new ArrayList<CourseDto>();
 		for(Course course : courseList){
+			courseDtoList.add(new CourseDto( course.getId(), course.getTitle(), course.getImage(), course.getLeturesCount(),
+					course.getHourCount(), course.getViewCount(), course.getPrice(), course.getDiscount(), course.getPromotionPrice(),
+					course.getDescription(), course.getContent(), course.getCategoryId(), course.getLastUpdate(), course.getCategory().getTitle()));
+		}
+		return courseDtoList;
+	}
+
+	@Override
+	public List<CourseDto> findByName(String titleCourse) {
+		List<Course> courseList = courseRepository.findByName(titleCourse);
+		List<CourseDto> courseDtoList = new ArrayList<CourseDto>();
+		for(Course course : courseList){
+			System.out.println(course.getId());
 			courseDtoList.add(new CourseDto( course.getId(), course.getTitle(), course.getImage(), course.getLeturesCount(),
 					course.getHourCount(), course.getViewCount(), course.getPrice(), course.getDiscount(), course.getPromotionPrice(),
 					course.getDescription(), course.getContent(), course.getCategoryId(), course.getLastUpdate(), course.getCategory().getTitle()));

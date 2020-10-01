@@ -1,7 +1,5 @@
 package com.myclass.controller;
 
-import com.myclass.dto.CategoryDto;
-import com.myclass.dto.CourseDto;
 import com.myclass.service.CategoryService;
 import com.myclass.service.CourseService;
 import com.myclass.util.UrlConstants;
@@ -11,7 +9,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import java.util.List;
 
 @Controller
 @RequestMapping(value = "")

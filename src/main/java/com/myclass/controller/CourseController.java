@@ -35,12 +35,19 @@ public class CourseController {
     }
     
     @RequestMapping(value = UrlConstants.Client.COURSE_DETAIL, method = RequestMethod.GET)
-    public String detail(@RequestParam("id") int id,ModelMap modelMap) {
+    public String detail(@RequestParam("id") int id, ModelMap modelMap) {
     	
     	modelMap.addAttribute("categoryDto", categoryService.findAll());
     	modelMap.addAttribute("courseDto", courseService.findById(id));
     	modelMap.addAttribute("targetDto", targetService.findAllCourseId(id));
     	modelMap.addAttribute("videoDto", videoService.findAllCourseId(id));
     	return UrlConstants.Client.COURSE_DETAIL_VIEW;
+    }
+    
+    
+    @RequestMapping(value = UrlConstants.Client.COURSE_SEARCH, method = RequestMethod.GET)
+    public String search(ModelMap modelMap) {
+    	modelMap.addAttribute("categoryDto", categoryService.findAll());
+    	return UrlConstants.Client.COURSE_SEARCH_VIEW;
     }
 }
